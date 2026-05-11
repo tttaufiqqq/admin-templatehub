@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-background: var(--color-brand-background);
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-brand-accent-1: var(--color-brand-accent-1);
+  --color-brand-accent-2: var(--color-brand-accent-2);
+  --color-brand-light: var(--color-brand-light);
+  --color-brand-bg: var(--color-brand-bg);
+  --color-brand-surface: var(--color-brand-surface);
+  --color-brand-muted: var(--color-brand-muted);
+  --color-brand-text: var(--color-brand-text);
+  --color-brand-border: var(--color-brand-border);
+  --font-sans: var(--font-brand-sans);
+  --font-display: var(--font-brand-display);
+  --font-mono: var(--font-brand-mono);
+}
+
+:root {
+  --color-brand-background: #f8fafc;
+  --color-brand-primary: #21295c;
+  --color-brand-secondary: #1b3b6f;
+  --color-brand-accent: #1c7293;
+  --color-brand-accent-1: #065a82;
+  --color-brand-accent-2: #1c7293;
+  --color-brand-light: #9eb3c2;
+  --color-brand-bg: #f8fafc;
+  --color-brand-surface: #ffffff;
+  --color-brand-muted: #edf2f7;
+  --color-brand-text: #21295c;
+  --color-brand-border: rgba(158, 179, 194, 0.52);
+  --color-brand-shadow-rgb: 33, 41, 92;
+  --color-brand-surface-tint: rgba(255, 255, 255, 0.88);
+  --color-brand-dark-panel: #102a3a;
+  --color-brand-on-dark: #f8fafc;
+  --color-brand-status-success-bg: #2f6b64;
+  --color-brand-status-success-icon-bg: #d8ede5;
+  --color-brand-status-success-text: #1d5a48;
+  --color-brand-status-success-detail: #f6fbf8;
+  --color-brand-status-danger-bg: #8b4c32;
+  --color-brand-status-danger-icon-bg: #f5ddd2;
+  --color-brand-status-danger-text: #8b4c32;
+  --color-brand-status-danger-detail: #fff8f3;
+  --color-brand-status-pending-bg: #b18952;
+  --color-brand-status-pending-icon-bg: #e8e3d4;
+  --color-brand-status-pending-text: #7c6137;
+  --color-brand-status-pending-detail: #fdfaf2;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-brand-border);
+  }
+
+  html {
+    background: var(--color-brand-bg);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-brand-sans), sans-serif;
+    background: transparent;
+    color: var(--color-brand-text);
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--color-brand-primary);
+    color: var(--color-brand-surface);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(var(--color-brand-shadow-rgb), 0.2);
+    border: 4px solid var(--color-brand-bg);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--color-brand-shadow-rgb), 0.4);
+  }
+}
+
+@layer utilities {
+  .brand-gradient-hero {
+    background: var(--color-brand-primary);
+  }
+
+  .brand-gradient-soft {
+    background: var(--color-brand-bg);
+  }
+
+  .brand-gradient-soft-strong {
+    background: var(--color-brand-muted);
+  }
+
+  .brand-gradient-status-success {
+    background: var(--color-brand-status-success-bg);
+  }
+
+  .brand-gradient-status-danger {
+    background: var(--color-brand-status-danger-bg);
+  }
+
+  .brand-gradient-status-pending {
+    background: var(--color-brand-status-pending-bg);
+  }
+
+  .brand-surface-tint {
+    background: var(--color-brand-surface-tint);
+  }
+
+  .brand-shadow-hero {
+    box-shadow: 0 30px 80px rgba(var(--color-brand-shadow-rgb), 0.18);
+  }
+
+  .brand-shadow-card {
+    box-shadow: 0 16px 40px rgba(var(--color-brand-shadow-rgb), 0.08);
+  }
+
+  .brand-shadow-soft {
+    box-shadow: 0 18px 50px rgba(var(--color-brand-shadow-rgb), 0.07);
+  }
+
+  .brand-shadow-panel {
+    box-shadow: 0 24px 60px rgba(var(--color-brand-shadow-rgb), 0.1);
+  }
+
+  .brand-shadow-button {
+    box-shadow: 0 14px 30px rgba(var(--color-brand-shadow-rgb), 0.16);
+  }
+
+  .brand-shadow-subtle {
+    box-shadow: 0 12px 30px rgba(var(--color-brand-shadow-rgb), 0.05);
+  }
+
+  .brand-radial-top {
+    background: transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .safe-break {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
