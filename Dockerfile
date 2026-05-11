@@ -6,6 +6,9 @@ RUN npm ci
 COPY prisma ./prisma/
 RUN npx prisma generate
 
+ARG DATABASE_URL=postgresql://build:build@localhost:5432/build
+ENV DATABASE_URL=$DATABASE_URL
+
 COPY . .
 RUN npm run build
 
