@@ -22,7 +22,16 @@ const brandMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "TemplateHub Admin",
+  applicationName: "TemplateHub Admin",
   description: "TemplateHub admin panel — manage products, orders, and payments.",
+  icons: {
+    apple: "/apple-icon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "TemplateHub Admin",
+  },
 };
 
 const htmlClassName = `${brandSans.variable} ${brandDisplay.variable} ${brandMono.variable} h-full antialiased`;
